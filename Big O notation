@@ -1,0 +1,21 @@
+
+What is Big O Notation? 
+
+In simple terms:
+1. It is the relative representation of the complexity of an algorithm
+2. It describes how an algorithm performs and scales
+3. It describes the upper bound of the growth rate of a function and could be thought of the worst case scenario
+
+For e.g. O(n2) 
+Here, n is the number of elements that the function receives as inputs. For n inputs, its complexity is equal to n2 (n-square).
+
+As the complexity of a function increases, the number of computations or time it takes to complete a function can rise quite significantly. 
+We want to keep this growth as low as possible, in order to optimize performance. Higher the complexity and O-quotient, lesser the scalability of the algorithm.
+
+
+-----------
+References:
+-----------
+https://en.wikipedia.org/wiki/Big_O_notation
+https://xlinux.nist.gov/dads/HTML/bigOnotation.html
+https://dzone.com/articles/learning-big-o-notation-with-on-complexity
