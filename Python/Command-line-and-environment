@@ -1,0 +1,14 @@
+# Command line:
+Most common use case of using command line is a simple invocation of a script:
+
+$ python3 myscript.py 
+
+
+
+# Command Line arguments
+The arguments that are given after the name of the program in the command line shell of the operating system are known as Command Line Arguments. 
+Python provides various ways of dealing with these types of arguments. The three most common are: 
+
+
+#### Ref: https://docs.python.org/3.8/using/cmdline.html#using-on-general
+#### Ref: https://www.geeksforgeeks.org/command-line-arguments-in-python/
