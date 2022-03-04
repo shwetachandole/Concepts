@@ -1,0 +1,123 @@
+
+
+# Python Identifiers:
+1. A Python identifier is a name used to identify a variable, function, class, module or other objects. 
+2. An identifier can be alphanumeric and can include an underscore (_) symbol. Punctuation characters such as @, $, % are not allowed.
+3. Python is a case sensitive programming language. For e.g. Growthrate and grwothrate will be two separate identifiers due to uppercase/lowercase first letter.
+
+# Naming conventions for Python identifiers:
+1. Class names start with an uppercase letter. 
+2. All other identifiers (except Class names) start with a lowercase letter.
+3. Single leading underscore in an identifier indicates a private identifier. 
+4. Two leading underscrores in an identifier indicate a strong private identifier, limited to the class, and not revealed unless class objects are accessed.
+5. Two leading and two trailing underscores in an identifier indicate that the identifier is a language defined special name. For e.g. __main__ 
+
+# Python reserved keywords:
+1. Are all lowercase letters only. 
+2. Cannot be used as constants, variables or any other identifier names. 
+List of reserved keywords:
+and	exec not as	finally	or assert	for	pass break	from	print class	global	raise continue	if	return 
+def	import	try del	in	while elif	is	with else	lambda	yield except
+
+# Lines and Indentation:
+1. No braces or brackets to indicate blocks of codes for class and fuction definitions or flow controls.
+2. Line indentation is rigidly enforced for blocks of codes.
+3. Number of spaces (or tabs) in an identation can be variable, but for a block of code, each line indentation must be the same;
+In other words, all continuous lines indented with the same numbers of saces would form a block.
+
+# Multi line statements:
+1. Typically, each new line is a new statement
+2. Use of a line continuation character (backslash \ ) indicates that the statement should continue in next line.
+    For e.g. 
+      total = item_ine + \
+              item_two + \
+              item_three
+3. Statements contained within brackets like [], {} or () do not need to use the line continuation character.
+    For e.g. days = ['Monday', 'Tuesday', 'Wednesday', 
+                      'Thursday', 'Friday']
+                      
+# Quotations:
+1. In Python, a string can be denoted by single ('example'), double ("example") or triple quotes ('''example''', """example""").
+2. Triple quotes can be used to add a string across multiple lines.
+
+# Comments in Python:
+1. A hash sign (#) not enclosed in a string literal indicates a single-line comment
+2. A comment can be added on a new line by itself, or at the end of a statement or expression
+3. Multi line comments can be added by using a hash sign at the start of each line
+4. String literals (''' or """) can be used within the code (a .py or .ipynb file for example) 
+   to insert multiline comments and do not generate any code. Even though triple quoted string literals do not generate any code, 
+   they are treated as code and should be properly indented within blocks to work correctly!
+   These are not to be confused with Docstrings (triple-quoted string literals appearing 
+   right after a function/class/module to generate documentation).
+   
+# Blank Lines:
+1. Python ignores lines with only whitespaces or those with a comment
+2. In an interactive session, an empty line is required to terminate a mutiline statement.
+    For e.g. (example below is copied from an actual exercise from interactive session)
+    >>> for i in range(1, 5):
+    ...     print(i)
+    ... 
+    1
+    2
+    3
+    4
+    >>> 
+    
+# Use of blank lines to create a trick code "Waiting for the user-action":
+  In this example, the use of "\n\n" creates two blank lines before the third line expression, 
+  which keeps the console window open until the user is done using the application, and hence 
+  the program waits for return key (indicating new blank line) to end the program.
+  
+  Use of new line keeps the console window open until the user is done using the application and 
+  once the user presses the enter key, the program ends.
+  For e.g.
+  >>> input("\n\nPress the enter key to exit")
+
+
+      Press the enter key to exit
+      ''
+  >>>
+  
+  Pressing any keys other than return (enter) key adds as an input to the expression and will get printed at the enter keystroke.
+  For e.g.
+  >>> input("\n\nPress the enter key to exit")
+
+
+      Press the enter key to exitasap
+      'asap'
+  >>>
+  
+  # Use of semicolon for multiple statements on a single line:
+   1. A semicolon at the end of an expression or commandline can allow more statements in the same line.
+   2. code blocks cannot be written in single line multiple statements separated by semicolon
+   E.g.
+   >>> print('abc'); 3+2; 'abc' + 'de'
+       abc
+       5
+       'abcde'
+   >>> 
+   
+   # Suites:
+   1. In Python, a group of multiple statements making a single code block are called suites
+   2. Code blocks making a class or functions, or compound statements such as if, while, def require a header line and a suite.
+   3. Header lines begin the statement with a keyword and have a colon (:) at the end
+   4. One or more lines following a header line make the suite
+   5. entering a blank line breaks the suite or the multi-line statements
+      For e.g.
+      if expression : 
+          suite
+      elif expression : 
+          suite 
+      else : 
+          suite
+          
+          
+      Following program will give error at elif as its preceding suite is interrupted by the bo=lank line -   
+      if expression:
+          suite
+          suite
+          
+      elif expresiion:
+          suite
+          
+    #### Above notes based on https://www.tutorialspoint.com/python3/python_basic_syntax.htm
