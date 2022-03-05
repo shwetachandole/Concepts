@@ -1,1 +1,255 @@
+# Variables in Python:
 
+- Variables help store values. When you create a variable, you reserve some space in the memory.
+- Variables can be of various data types.
+- In python, variables do not need to be declared explicitly. 
+- A variable is automatically declared when we assign a value to it.
+- If the variable is assigned a new value or gets a new value as a result of an expression, 
+  then the previously assigned value is overwritten.
+- Data type of a variable is determined by the value assigned to it.
+- A single value can be assigned to multiple variables at once. e.g. a = b = c = 1
+- Multiple objects can be assigned to multiple variables as 
+  e.g. a, b, c = 1, 2, 'abc' means a = 1, b = 2, c = 'abc' # 'abc' is a string
+  
+- Reference of a variable to an object (and even multiple variables) can be deleted using the del statement.
+  e.g. var1 = 10
+       del var1
+       del var1, var2
+  
+# Python has five standard data types −
+  1. Numbers
+  2. String
+  3. List 
+  4. Tuple
+  5. Dictionary
+  
+# Python Numbers
+- Python supports three different numerical types −
+  1. int (signed integers)
+  2. float (floating point real values)
+  3. complex (complex numbers)
+ 
+- All integers in Python3 are represented as long integers. Hence, there is no separate number type as long.
+ 
+- A complex number consists of an ordered pair of real floating-point numbers denoted by x + yj, 
+   where x and y are real numbers and j is the imaginary unit.
+
+# Python Strings
+- A string is a set of characters enclosed in quatation marks, single or double quotes
+
+- Subset of strings can be taken as slice operator ([] and [:]) 
+- with indexes starting at 0 
+- last element is indicated by -1
+
+- strings can be concatenated using plus sign (+)
+- strings can be repeated using asterisk operator (*)
+
+For e.g. 
+#!/usr/bin/python3
+
+str = 'Hello World!'
+
+print (str)          # Prints complete string
+print (str[0])       # Prints first character of the string
+print (str[2:5])     # Prints characters starting from 3rd to 5th
+print (str[2:])      # Prints string starting from 3rd character
+print (str * 2)      # Prints string two times
+print (str + "TEST") # Prints concatenated string
+This will produce the following result −
+
+Hello World!
+H
+llo
+llo World!
+Hello World!Hello World!
+Hello World!TEST
+
+# Python Lists
+- List contains items separated by commas 
+- List is enclosed in square brackets []
+
+- List is similar to array in C
+
+- List can have items with different data types
+- A list can contain individual items as well as enclosed lists at the same time
+
+- List items can be accessed using slice operator [] or [:]
+- 0 is the first element and -1 is the first from last element
+
+- List conctenation operator is + sign, and repetition operator is * sign
+
+For e.g.
+#!/usr/bin/python3
+
+list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]
+tinylist = [123, 'john']
+
+print (list)          # Prints complete list
+print (list[0])       # Prints first element of the list
+print (list[1:3])     # Prints elements starting from 2nd till 3rd 
+print (list[2:])      # Prints elements starting from 3rd element
+print (tinylist * 2)  # Prints list two times
+print (list + tinylist) # Prints concatenated lists
+
+This produces the following result −
+
+['abcd', 786, 2.23, 'john', 70.200000000000003]
+abcd
+[786, 2.23]
+[2.23, 'john', 70.200000000000003]
+[123, 'john', 123, 'john']
+['abcd', 786, 2.23, 'john', 70.200000000000003, 123, 'john']
+
+# Python Tuples
+- Tuples are enclosed in parentheses ()
+- Tuples are similar to list, but they are immutable (cannot be changed or edited)
+- Tuple is like a read-only list
+
+For E.g.
+#!/usr/bin/python3
+
+tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+tinytuple = (123, 'john')
+
+print (tuple)           # Prints complete tuple
+print (tuple[0])        # Prints first element of the tuple
+print (tuple[1:3])      # Prints elements starting from 2nd till 3rd 
+print (tuple[2:])       # Prints elements starting from 3rd element
+print (tinytuple * 2)   # Prints tuple two times
+print (tuple + tinytuple) # Prints concatenated tuple
+This produces the following result −
+
+('abcd', 786, 2.23, 'john', 70.200000000000003)
+abcd
+(786, 2.23)
+(2.23, 'john', 70.200000000000003)
+(123, 'john', 123, 'john')
+('abcd', 786, 2.23, 'john', 70.200000000000003, 123, 'john')
+The following code is invalid with tuple, because we attempted to update a tuple, which is not allowed. Similar case is possible with lists −
+
+#!/usr/bin/python3
+
+tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+list = [ 'abcd', 786 , 2.23, 'john', 70.2  ]
+tuple[2] = 1000    # Invalid syntax with tuple
+list[2] = 1000     # Valid syntax with list
+
+# Python Dictionary
+- Disctionaries are enclosed in curly braces {}
+- Dictionary consists of key-value pairs
+- Key can ve any data type, but is usually string or number
+- Value can be any object (string, number, list, tuple, etc)
+- dictionary.keys() gets a list of all keys 
+- dictionary.values() gets a list of all values 
+- Elements in a dictionary are unordered, they do not have any order
+
+
+dict = {}
+dict['one'] = "This is one"
+dict[2]     = "This is two"
+
+tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
+
+print (dict['one'])       # Prints value for 'one' key
+print (dict[2])           # Prints value for 2 key
+print (tinydict)          # Prints complete dictionary
+print (tinydict.keys())   # Prints all the keys
+print (tinydict.values()) # Prints all the values
+This produces the following result −
+
+This is one
+This is two
+{'name': 'john', 'dept': 'sales', 'code': 6734}
+dict_keys(['name', 'dept', 'code'])
+dict_values(['john', 'sales', 6734])
+
+
+# Data type conversions
+- Built-in datatypes can be converted from one to another using type-name functions
+- Several built-in functions are available for this purpose
+- Sr.No.	Function & Description
+1	
+int(x [,base])
+
+Converts x to an integer. The base specifies the base if x is a string.
+
+2	
+float(x)
+
+Converts x to a floating-point number.
+
+3	
+complex(real [,imag])
+
+Creates a complex number.
+
+4	
+str(x)
+
+Converts object x to a string representation.
+
+5	
+repr(x)
+
+Converts object x to an expression string.
+
+6	
+eval(str)
+
+Evaluates a string and returns an object.
+
+7	
+tuple(s)
+
+Converts s to a tuple.
+
+8	
+list(s)
+
+Converts s to a list.
+
+9	
+set(s)
+
+Converts s to a set.
+
+10	
+dict(d)
+
+Creates a dictionary. d must be a sequence of (key,value) tuples.
+
+11	
+frozenset(s)
+
+Converts s to a frozen set.
+
+12	
+chr(x)
+
+Converts an integer to a character.
+
+13	
+unichr(x)
+
+Converts an integer to a Unicode character.
+
+14	
+ord(x)
+
+Converts a single character to its integer value.
+
+15	
+hex(x)
+
+Converts an integer to a hexadecimal string.
+
+16	
+oct(x)
+
+Converts an integer to an octal string.
+
+
+
+
+
+ 
